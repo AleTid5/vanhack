@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
+import Main from "./sections/main";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <Main />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
