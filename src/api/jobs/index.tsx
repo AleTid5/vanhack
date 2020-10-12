@@ -1,9 +1,9 @@
 import axios from "axios";
 import { IJob } from "../../interfaces/IJob";
 
-const maxResults = 10;
+const maxResults = 100;
 const buildUrl = (skipCount: number) =>
-  `https://api-vanhack-prod.azurewebsites.net/v1/job/search/full/?MaxResultCount=${maxResults}&SkipCount=${skipCount}`;
+  `https://cors-anywhere.herokuapp.com/https://api-vanhack-prod.azurewebsites.net/v1/job/search/full/?MaxResultCount=${maxResults}&SkipCount=${skipCount}`;
 const buildJobURL = (id: number) => `https://vanhack.com/platform/#/jobs/${id}`;
 const buildSalary = (start?: number, end?: number) => end || start || null;
 const jobs: IJob[] = [];
@@ -14,7 +14,10 @@ const scrapVanHack = async (skipCount: number = 0) => {
       result: { items },
     },
   } = await axios.get(buildUrl(skipCount), {
-    headers: { "Access-Control-Allow-Origin": "*" },
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      requireHeader: ["origin", "x-requested-with"],
+    },
   });
 
   jobs.push(

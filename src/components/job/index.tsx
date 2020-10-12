@@ -42,7 +42,7 @@ export default ({
           className={classes.spaceTop}
         >
           <Grid item xs={3}>
-            <Typography variant="h3" gutterBottom>
+            <Typography variant="h4" gutterBottom>
               {country}
             </Typography>
           </Grid>
