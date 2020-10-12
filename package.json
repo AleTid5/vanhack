@@ -1,6 +1,6 @@
 {
-  "name": "van-hack",
-  "homepage":"https://aletid5.github.io/van-hack",
+  "name": "vanhack",
+  "homepage":"https://aletid5.github.io/vanhack",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
