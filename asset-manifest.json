@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/vanhack/static/css/main.5f361e03.chunk.css",
-    "main.js": "/vanhack/static/js/main.3bf9f263.chunk.js",
-    "main.js.map": "/vanhack/static/js/main.3bf9f263.chunk.js.map",
+    "main.js": "/vanhack/static/js/main.2ade6866.chunk.js",
+    "main.js.map": "/vanhack/static/js/main.2ade6866.chunk.js.map",
     "runtime-main.js": "/vanhack/static/js/runtime-main.e916a4cc.js",
     "runtime-main.js.map": "/vanhack/static/js/runtime-main.e916a4cc.js.map",
     "static/js/2.658a73b3.chunk.js": "/vanhack/static/js/2.658a73b3.chunk.js",
     "static/js/2.658a73b3.chunk.js.map": "/vanhack/static/js/2.658a73b3.chunk.js.map",
     "index.html": "/vanhack/index.html",
-    "precache-manifest.fd27d429f7df76831b3a82b0f87519fd.js": "/vanhack/precache-manifest.fd27d429f7df76831b3a82b0f87519fd.js",
+    "precache-manifest.8f07a4968d73865c34ae6c58e70ff1c8.js": "/vanhack/precache-manifest.8f07a4968d73865c34ae6c58e70ff1c8.js",
     "service-worker.js": "/vanhack/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/vanhack/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.658a73b3.chunk.js.LICENSE.txt": "/vanhack/static/js/2.658a73b3.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e916a4cc.js",
     "static/js/2.658a73b3.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.3bf9f263.chunk.js"
+    "static/js/main.2ade6866.chunk.js"
   ]
 }
