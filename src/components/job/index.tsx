@@ -9,6 +9,7 @@ import {
   Chip,
   Divider,
   Grid,
+  Typography,
 } from "@material-ui/core";
 import styles from "./styles";
 import { ISkill } from "../../interfaces/ISkill";
@@ -32,7 +33,21 @@ export default ({
 
   return (
     <>
-      {jump && <Grid item xs={12} className={classes.spaceTop} />}
+      {jump && (
+        <Grid
+          direction="row"
+          justify="flex-start"
+          alignItems="center"
+          xs={12}
+          className={classes.spaceTop}
+        >
+          <Grid item xs={3}>
+            <Typography variant="h3" gutterBottom>
+              {country}
+            </Typography>
+          </Grid>
+        </Grid>
+      )}
       <Job onClick={() => window.open(link)}>
         <Card>
           <CardActionArea>

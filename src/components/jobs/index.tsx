@@ -3,8 +3,9 @@ import Jobs from "./Jobs";
 
 interface Props {
   children: ReactNode;
+  fetchingData: boolean;
 }
 
-export default ({ children }: Props) => {
-  return <Jobs>{children}</Jobs>;
+export default ({ children, fetchingData }: Props) => {
+  return <Jobs fetchingData={fetchingData}>{children}</Jobs>;
 };
