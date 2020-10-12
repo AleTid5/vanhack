@@ -13,7 +13,9 @@ const scrapVanHack = async (skipCount: number = 0) => {
     data: {
       result: { items },
     },
-  } = await axios.get(buildUrl(skipCount));
+  } = await axios.get(buildUrl(skipCount), {
+    headers: { "Access-Control-Allow-Origin": "*" },
+  });
 
   jobs.push(
     ...items.map((job: IJob) => ({
