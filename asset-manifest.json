@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/van-hack/static/css/main.5f361e03.chunk.css",
+    "main.js": "/van-hack/static/js/main.43df673d.chunk.js",
+    "main.js.map": "/van-hack/static/js/main.43df673d.chunk.js.map",
+    "runtime-main.js": "/van-hack/static/js/runtime-main.6ea472e2.js",
+    "runtime-main.js.map": "/van-hack/static/js/runtime-main.6ea472e2.js.map",
+    "static/js/2.e6d03bdf.chunk.js": "/van-hack/static/js/2.e6d03bdf.chunk.js",
+    "static/js/2.e6d03bdf.chunk.js.map": "/van-hack/static/js/2.e6d03bdf.chunk.js.map",
+    "index.html": "/van-hack/index.html",
+    "precache-manifest.9a22b8ea6baea5169af3203c66e9ecf1.js": "/van-hack/precache-manifest.9a22b8ea6baea5169af3203c66e9ecf1.js",
+    "service-worker.js": "/van-hack/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/van-hack/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.e6d03bdf.chunk.js.LICENSE.txt": "/van-hack/static/js/2.e6d03bdf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ea472e2.js",
+    "static/js/2.e6d03bdf.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.43df673d.chunk.js"
+  ]
+}
