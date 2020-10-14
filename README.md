@@ -13,13 +13,7 @@ This is an application made for all citizens interested in seeing all the jobs t
 - Filter jobs
 - Instantly share a job
 
-# 🖥 Development Installation
-- Clone the project
-- Open it in Android Studio
-- Install the dependencies
-- Run / Debug the app
-
-## Installation
+## 🖥 Installation
 
 Requires [Node.js](https://nodejs.org/) to run and install dependencies.
 
@@ -30,3 +24,7 @@ $ cd vanhack
 $ npm i
 $ npm run start
 ```
+
+## 👻 LICENCE
+
+[WTFPL](http://www.wtfpl.net/about/)
