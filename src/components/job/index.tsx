@@ -69,7 +69,7 @@ export default ({
                   <div>
                     {salary ? (
                       <b>
-                        {salary} {currency}
+                        {salary}K {currency}
                       </b>
                     ) : (
                       "Not informed"

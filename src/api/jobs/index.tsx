@@ -32,6 +32,14 @@ const scrapVanHack = async (skipCount: number = 0) => {
     await scrapVanHack(skipCount + maxResults);
   }
 
+  jobs.sort((currentJob: IJob, nextJob: IJob) =>
+    currentJob.city < nextJob.city ? -1 : 1
+  );
+
+  jobs.sort((currentJob: IJob, nextJob: IJob) =>
+    currentJob.salary > nextJob.salary ? -1 : 1
+  );
+
   return jobs.sort((currentJob: IJob, nextJob: IJob) =>
     currentJob.country < nextJob.country ? -1 : 1
   );
