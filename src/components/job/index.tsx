@@ -35,10 +35,10 @@ export default ({
     <>
       {jump && (
         <Grid
+          container
           direction="row"
           justify="flex-start"
           alignItems="center"
-          xs={12}
           className={classes.spaceTop}
         >
           <Grid item xs={3}>
