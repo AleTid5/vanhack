@@ -1,0 +1,10 @@
+{
+  "api": {
+    "maxResults": 100,
+    "jobsURL": "https://vanhack.com/platform/#/jobs/",
+    "headers": {
+      "Access-Control-Allow-Origin": "*",
+      "requireHeader": ["origin", "x-requested-with"]
+    }
+  }
+}

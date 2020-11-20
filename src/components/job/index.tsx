@@ -1,5 +1,5 @@
 import React from "react";
-import { IJob } from "../../interfaces/IJob";
+import { iJob, iSkill } from "../../interfaces";
 import Job from "./Job";
 import {
   Avatar,
@@ -12,9 +12,8 @@ import {
   Typography,
 } from "@material-ui/core";
 import styles from "./styles";
-import { ISkill } from "../../interfaces/ISkill";
 
-interface Props extends IJob {
+interface Props extends iJob {
   jump: boolean;
 }
 
@@ -81,7 +80,7 @@ export default ({
                   {positionName}
                 </Grid>
                 <Grid item xs={12}>
-                  {mustHaveSkills?.map(({ name }: ISkill, key: number) => (
+                  {mustHaveSkills?.map(({ name }: iSkill, key: number) => (
                     <Chip
                       className={classes.spacedBetween}
                       key={key}
@@ -91,7 +90,7 @@ export default ({
                       color="secondary"
                     />
                   ))}
-                  {niceToHaveSkills?.map(({ name }: ISkill, key: number) => (
+                  {niceToHaveSkills?.map(({ name }: iSkill, key: number) => (
                     <Chip
                       className={classes.spacedBetween}
                       key={key}
