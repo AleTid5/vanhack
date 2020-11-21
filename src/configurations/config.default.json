@@ -6,5 +6,14 @@
       "Access-Control-Allow-Origin": "*",
       "requireHeader": ["origin", "x-requested-with"]
     }
+  },
+  "countries": {
+    "Brazil": "BR",
+    "Canada": "CA",
+    "Colombia": "CO",
+    "Estonia": "EE",
+    "Germany": "DE",
+    "United Kingdom": "GB-ENG",
+    "United States": "US"
   }
 }

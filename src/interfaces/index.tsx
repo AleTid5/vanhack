@@ -5,6 +5,7 @@ export interface iConfiguration {
     jobsURL: string;
     headers: object;
   };
+  countries: any;
 }
 
 export interface iJob {
