@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import {
   Checkbox,
-  InputLabel,
   FormControl,
+  InputLabel,
   ListItemText,
   MenuItem,
   Select,
@@ -15,7 +15,7 @@ import { ConfigurationContext } from "../../../contexts/ConfigurationContext";
 
 export default () => {
   const { configuration } = useContext(ConfigurationContext);
-  const { jobs, setJobs } = useContext(FilterContext);
+  const { jobs, setCountries } = useContext(FilterContext);
   const [selectedFlag, setSelectedFlag] = React.useState<string[]>([]);
   const classes = styles();
 
@@ -25,14 +25,7 @@ export default () => {
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     const selectedCountries = event.target.value as string[];
     setSelectedFlag(selectedCountries);
-
-    if (selectedCountries.length > 0) {
-      setJobs(
-        jobs.filter((job: iJob) => selectedCountries.includes(job.country))
-      );
-    } else {
-      setJobs(jobs);
-    }
+    setCountries(selectedCountries);
   };
 
   const getCountryCode = (country: string) => configuration.countries[country];

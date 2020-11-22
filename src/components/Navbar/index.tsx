@@ -1,15 +1,10 @@
-import React, { useContext } from "react";
-import {
-  AppBar,
-  Button,
-  IconButton,
-  TextField,
-  Toolbar,
-  Typography,
-} from "@material-ui/core";
+import React from "react";
+import { AppBar, IconButton, Toolbar, Typography } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import styles from "./styles";
 import FlagFilter from "../filters/FlagFilter";
+import TechnologyFilter from "../filters/TechnologyFilter";
+import SalaryFilter from "../filters/SalaryFilter";
 
 export default () => {
   const classes = styles();
@@ -22,16 +17,8 @@ export default () => {
         </IconButton>
         <Typography variant="h6">Van Hack</Typography>
         <FlagFilter />
-        <TextField
-          id="outlined-basic"
-          label="Enter at least 3 characters"
-          variant="outlined"
-          size="small"
-          color="primary"
-          style={{
-            minWidth: "240px",
-          }}
-        />
+        <TechnologyFilter />
+        <SalaryFilter />
       </Toolbar>
     </AppBar>
   );
