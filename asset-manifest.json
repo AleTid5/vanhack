@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/vanhack/static/js/main.3bcb2159.chunk.js",
-    "main.js.map": "/vanhack/static/js/main.3bcb2159.chunk.js.map",
+    "main.js": "/vanhack/static/js/main.97857f82.chunk.js",
+    "main.js.map": "/vanhack/static/js/main.97857f82.chunk.js.map",
     "runtime-main.js": "/vanhack/static/js/runtime-main.71c824f5.js",
     "runtime-main.js.map": "/vanhack/static/js/runtime-main.71c824f5.js.map",
     "static/js/2.35ef9bbc.chunk.js": "/vanhack/static/js/2.35ef9bbc.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.71c824f5.js",
     "static/js/2.35ef9bbc.chunk.js",
-    "static/js/main.3bcb2159.chunk.js"
+    "static/js/main.97857f82.chunk.js"
   ]
 }
