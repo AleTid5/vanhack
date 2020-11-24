@@ -1,22 +1,17 @@
 {
   "files": {
-    "main.css": "/vanhack/static/css/main.5f361e03.chunk.css",
-    "main.js": "/vanhack/static/js/main.fbb7df4d.chunk.js",
-    "main.js.map": "/vanhack/static/js/main.fbb7df4d.chunk.js.map",
-    "runtime-main.js": "/vanhack/static/js/runtime-main.e916a4cc.js",
-    "runtime-main.js.map": "/vanhack/static/js/runtime-main.e916a4cc.js.map",
-    "static/js/2.658a73b3.chunk.js": "/vanhack/static/js/2.658a73b3.chunk.js",
-    "static/js/2.658a73b3.chunk.js.map": "/vanhack/static/js/2.658a73b3.chunk.js.map",
+    "main.js": "/vanhack/static/js/main.3bcb2159.chunk.js",
+    "main.js.map": "/vanhack/static/js/main.3bcb2159.chunk.js.map",
+    "runtime-main.js": "/vanhack/static/js/runtime-main.71c824f5.js",
+    "runtime-main.js.map": "/vanhack/static/js/runtime-main.71c824f5.js.map",
+    "static/js/2.35ef9bbc.chunk.js": "/vanhack/static/js/2.35ef9bbc.chunk.js",
+    "static/js/2.35ef9bbc.chunk.js.map": "/vanhack/static/js/2.35ef9bbc.chunk.js.map",
     "index.html": "/vanhack/index.html",
-    "precache-manifest.8c67ebb005e0768a384d1efc3fec142d.js": "/vanhack/precache-manifest.8c67ebb005e0768a384d1efc3fec142d.js",
-    "service-worker.js": "/vanhack/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/vanhack/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.658a73b3.chunk.js.LICENSE.txt": "/vanhack/static/js/2.658a73b3.chunk.js.LICENSE.txt"
+    "static/js/2.35ef9bbc.chunk.js.LICENSE.txt": "/vanhack/static/js/2.35ef9bbc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e916a4cc.js",
-    "static/js/2.658a73b3.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.fbb7df4d.chunk.js"
+    "static/js/runtime-main.71c824f5.js",
+    "static/js/2.35ef9bbc.chunk.js",
+    "static/js/main.3bcb2159.chunk.js"
   ]
 }
