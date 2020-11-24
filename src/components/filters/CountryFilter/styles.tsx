@@ -16,8 +16,7 @@ export default makeStyles((theme: Theme) =>
       marginRight: "5px",
     },
     form: {
-      width: "150px",
-      marginLeft: "15px",
+      width: "100%",
     },
   })
 );

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import axios from "axios";
 import { ConfigurationContext } from "../../contexts/ConfigurationContext";
 import { iConfiguration, iJob } from "../../interfaces";
@@ -42,6 +42,7 @@ export default () => {
 
   useEffect(() => {
     fetchJobs(configuration).then(setJobs);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return [jobs];

@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "@material-ui/styles": "^4.10.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -15,6 +16,7 @@
     "@types/react": "^16.9.51",
     "@types/react-dom": "^16.9.8",
     "axios": "^0.20.0",
+    "material-ui-chip-input": "^2.0.0-beta.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flag-kit": "^0.3.1",
@@ -30,7 +32,17 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "overrides": [
+      {
+        "files": [
+          "src/**/*.tsx"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   },
   "browserslist": {
     "production": [

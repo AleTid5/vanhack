@@ -1,35 +1,36 @@
 export interface iConfiguration {
   baseURL: string;
-  api: {
-    maxResults: number;
-    jobsURL: string;
-    headers: object;
-  };
   countries: any;
+  api: {
+    headers: object;
+    jobsURL: string;
+    maxResults: number;
+  };
 }
 
 export interface iJob {
   id: number;
-  link: string;
-  positionName: string;
+  city: string;
+  company?: string;
+  country: string;
+  currency?: string;
   description: string;
   descriptionHtml: string;
-  city: string;
-  country: string;
-  postDate: string;
   jobType: string;
-  salary: number;
+  link: string;
   mustHaveSkills?: iSkill[];
+  newJob: boolean;
   niceToHaveSkills?: iSkill[];
-  salaryRangeStart?: number;
+  positionName: string;
+  postDate: string;
+  salary: number;
   salaryRangeEnd?: number;
-  company?: string;
-  currency?: string;
+  salaryRangeStart?: number;
 }
 
 export interface iSkill {
   id: number;
-  name: string;
   match: boolean;
   minYearsOfExperience?: number;
+  name: string;
 }

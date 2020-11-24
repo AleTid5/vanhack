@@ -1,15 +1,14 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { iJob } from "../../../interfaces";
 import { FilterContext } from "../../../contexts/FilterContext";
 import { Slider, Typography } from "@material-ui/core";
 import styles from "./styles";
 
-function valuetext(value: number) {
-  return `${value}K`;
-}
+const RANGE_STEP: number = 10;
 
 export default () => {
   const { jobs, salaryRange, setSalaryRange } = useContext(FilterContext);
+  const [maxRange, setMaxRange] = useState<number>(0);
   const classes = styles();
 
   useEffect(() => {
@@ -17,29 +16,32 @@ export default () => {
       .filter(({ salary }: iJob) => salary)
       .map(({ salary }: iJob) => salary);
 
-    setSalaryRange([
-      Math.min.apply(Math, salaries),
-      Math.max.apply(Math, salaries),
-    ]);
-  }, [jobs]);
+    const maxSalary: number = Math.max.apply(Math, salaries);
+    setMaxRange(maxSalary);
+    setSalaryRange([0, maxSalary]);
+  }, [jobs, setSalaryRange]);
 
   const handleChange = (event: any, newSalaryRange: number | number[]) => {
     setSalaryRange(newSalaryRange as number[]);
-    console.log(newSalaryRange);
   };
+
+  const isNotInformed = () => salaryRange[0] === 0 && 0 === salaryRange[1];
 
   return (
     <div className={classes.root}>
-      <Typography id="discrete-slider-always" gutterBottom>
-        Salary range
+      <Typography id="range-slider" gutterBottom>
+        {isNotInformed()
+          ? "Not informed"
+          : `Salary range (${salaryRange[0]} - ${salaryRange[1]})`}
       </Typography>
       <Slider
         value={salaryRange}
-        getAriaValueText={valuetext}
         onChange={handleChange}
-        aria-labelledby="discrete-slider-always"
-        step={1}
+        aria-labelledby="range-slider"
+        step={RANGE_STEP}
         valueLabelDisplay="auto"
+        max={maxRange}
+        style={{ color: "#34dc87" }}
       />
     </div>
   );

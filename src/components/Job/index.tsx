@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { iJob, iSkill } from "../../interfaces";
 import Job from "./Job";
 import {
@@ -12,6 +12,8 @@ import {
   Typography,
 } from "@material-ui/core";
 import styles from "./styles";
+import { FlagIcon } from "react-flag-kit";
+import { ConfigurationContext } from "../../contexts/ConfigurationContext";
 
 interface Props extends iJob {
   jump: boolean;
@@ -28,7 +30,10 @@ export default ({
   niceToHaveSkills,
   jump,
 }: Props) => {
+  const { configuration } = useContext(ConfigurationContext);
+
   const classes = styles();
+  const getCountryCode = (country: string) => configuration.countries[country];
 
   return (
     <>
@@ -39,8 +44,17 @@ export default ({
           justify="flex-start"
           alignItems="center"
           className={classes.spaceTop}
+          style={{ textAlign: "left" }}
         >
-          <Grid item xs={3}>
+          <Grid item xs={2} sm={1}>
+            <FlagIcon
+              key={country}
+              code={getCountryCode(country)}
+              size={32}
+              style={{ marginBottom: "10px" }}
+            />
+          </Grid>
+          <Grid item xs={2}>
             <Typography variant="h4" gutterBottom>
               {country}
             </Typography>

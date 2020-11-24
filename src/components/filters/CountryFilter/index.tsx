@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   Checkbox,
   FormControl,
@@ -16,10 +16,9 @@ import { ConfigurationContext } from "../../../contexts/ConfigurationContext";
 export default () => {
   const { configuration } = useContext(ConfigurationContext);
   const { jobs, setCountries } = useContext(FilterContext);
-  const [selectedFlag, setSelectedFlag] = React.useState<string[]>([]);
+  const [selectedFlag, setSelectedFlag] = useState<string[]>([]);
   const classes = styles();
 
-  // @ts-ignore
   const countries = [...new Set(jobs.map((job: iJob) => job.country))];
 
   const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
@@ -34,6 +33,7 @@ export default () => {
     <FormControl className={classes.form}>
       <InputLabel htmlFor="select-country">Countries</InputLabel>
       <Select
+        autoWidth={false}
         multiple
         value={selectedFlag}
         onChange={handleChange}
@@ -48,9 +48,6 @@ export default () => {
       >
         {countries.map((country: string) => (
           <MenuItem key={country} value={country}>
-            <span className={classes.marginFlag}>
-              <FlagIcon code={getCountryCode(country)} size={16} />
-            </span>
             <ListItemText primary={country} />
             <Checkbox checked={selectedFlag.indexOf(country) > -1} />
           </MenuItem>

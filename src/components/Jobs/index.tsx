@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Jobs from "./Jobs";
 import Job from "../Job";
 import { iJob } from "../../interfaces";
-import withFilteredNavbar from "../WithFilteredNavbar";
+import withFilters from "../WithFilters";
 
-export default withFilteredNavbar(({ items }: { items: iJob[] }) => {
-  const [jobs, setJobs] = useState<iJob[]>([]);
-
-  useEffect(() => {
-    setJobs(items);
-  }, [items]);
-
+export default withFilters(({ jobs }: { jobs: iJob[] }) => {
   return (
     <Jobs fetchingData={jobs.length === 0}>
       {jobs.map((job: iJob, key: number) => (

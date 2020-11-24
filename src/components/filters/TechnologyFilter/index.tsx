@@ -1,19 +1,15 @@
-import React from "react";
-import { TextField } from "@material-ui/core";
+import React, { useContext } from "react";
+import ChipInput from "material-ui-chip-input";
+import { FilterContext } from "../../../contexts/FilterContext";
 
 export default () => {
-  //const { jobs, setJobs } = useContext(FilterContext);
+  const { setTechnologies } = useContext(FilterContext);
 
   return (
-    <TextField
-      id="outlined-basic"
-      label="Enter at least 3 characters"
-      variant="outlined"
-      size="small"
-      color="primary"
-      style={{
-        minWidth: "240px",
-      }}
+    <ChipInput
+      fullWidth
+      onChange={setTechnologies}
+      label="Enter technologies"
     />
   );
 };
