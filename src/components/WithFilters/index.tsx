@@ -41,12 +41,12 @@ export default (Component: React.FunctionComponent<iProps>) => ({
       filteredJobs = filteredJobs.filter((job: iJob) =>
         technologies.some(
           (technology: string) =>
-            job.mustHaveSkills
-              ?.map(({ name }: iSkill) => name)
-              .includes(technology) ||
-            job.niceToHaveSkills
-              ?.map(({ name }: iSkill) => name)
-              .includes(technology)
+            job.mustHaveSkills?.some(({ name }: iSkill) =>
+              name.toLowerCase().includes(technology)
+            ) ||
+            job.niceToHaveSkills?.some(({ name }: iSkill) =>
+              name.toLowerCase().includes(technology)
+            )
         )
       );
     }
