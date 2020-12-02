@@ -14,6 +14,7 @@ import {
 import styles from "./styles";
 import { FlagIcon } from "react-flag-kit";
 import { ConfigurationContext } from "../../contexts/ConfigurationContext";
+import TimeAgo from 'timeago-react';
 
 interface Props extends iJob {
   jump: boolean;
@@ -29,6 +30,7 @@ export default ({
   mustHaveSkills,
   niceToHaveSkills,
   jump,
+  postDate
 }: Props) => {
   const { configuration } = useContext(ConfigurationContext);
 
@@ -92,6 +94,8 @@ export default ({
                 <Grid item xs={12}>
                   <Divider variant="middle" className={classes.spaceBottom} />
                   {positionName}
+                  <br />
+                  (<TimeAgo datetime={postDate} />)
                 </Grid>
                 <Grid item xs={12}>
                   {mustHaveSkills?.map(({ name }: iSkill, key: number) => (
