@@ -10,7 +10,9 @@ export default withFilters(({ jobs }: { jobs: iJob[] }) => {
       {jobs.map((job: iJob, key: number) => (
         <Job
           key={key}
-          jump={key === 0 || (key > 0 && job.country !== jobs[key - 1].country)}
+          showMainCountry={
+            key === 0 || (key > 0 && job.country !== jobs[key - 1].country)
+          }
           {...job}
         />
       ))}
