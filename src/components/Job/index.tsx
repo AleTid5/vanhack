@@ -94,8 +94,9 @@ export default ({
                 <Grid item xs={12}>
                   <Divider variant="middle" className={classes.spaceBottom} />
                   {positionName}
-                  <br />
-                  (<TimeAgo datetime={postDate} />)
+                  <div> 
+                    <em>(<TimeAgo datetime={postDate} />)</em>
+                  </div>
                 </Grid>
                 <Grid item xs={12}>
                   {mustHaveSkills?.map(({ name }: iSkill, key: number) => (
