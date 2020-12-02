@@ -1,7 +1,7 @@
-import React, { createContext, ReactNode } from "react";
+import React, {createContext, ReactNode} from "react";
 import defaultConfig from "../configurations/config.default.json";
 import Exception from "../constants/exceptions";
-import { iConfiguration } from "../interfaces";
+import {iConfiguration} from "../interfaces";
 
 interface iContext {
   configuration: iConfiguration;

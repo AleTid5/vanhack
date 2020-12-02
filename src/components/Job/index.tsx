@@ -1,20 +1,11 @@
-import React, { useContext } from "react";
-import { iJob, iSkill } from "../../interfaces";
+import React, {useContext} from "react";
 import Job from "./Job";
-import {
-  Avatar,
-  Card,
-  CardActionArea,
-  CardContent,
-  Chip,
-  Divider,
-  Grid,
-  Typography,
-} from "@material-ui/core";
-import styles from "./styles";
-import { FlagIcon } from "react-flag-kit";
-import { ConfigurationContext } from "../../contexts/ConfigurationContext";
+import {Avatar, Card, CardActionArea, CardContent, Chip, Divider, Grid, List, Typography,} from "@material-ui/core";
+import {FlagIcon} from "react-flag-kit";
 import TimeAgo from "timeago-react";
+import styles from "./styles";
+import {iJob, iSkill} from "../../interfaces";
+import {ConfigurationContext} from "../../contexts/ConfigurationContext";
 
 interface Props extends iJob {
   showMainCountry: boolean;
@@ -26,6 +17,7 @@ export default ({
   currency,
   salary,
   link,
+  newJob,
   positionName,
   mustHaveSkills,
   niceToHaveSkills,
@@ -36,6 +28,29 @@ export default ({
 
   const classes = styles();
   const getCountryCode = (country: string) => configuration.countries[country];
+
+  const NewJob = () => (
+    <Grid item xs={12}>
+      <List>
+        <Divider component="li" />
+        <li
+          style={{
+            position: "relative",
+            top: "-15px",
+            backgroundColor: "white",
+            margin: "2px 40% 0 40%",
+          }}
+        >
+          <Chip
+            label="New"
+            className={classes.avatarPulse}
+            style={{ color: "#fff", backgroundColor: "#4caf50" }}
+            size="small"
+          />
+        </li>
+      </List>
+    </Grid>
+  );
 
   return (
     <>
@@ -97,7 +112,11 @@ export default ({
                   </div>
                 </Grid>
                 <Grid item xs={12}>
-                  <Divider variant="middle" className={classes.spaceBottom} />
+                  {newJob ? (
+                    <NewJob />
+                  ) : (
+                    <Divider variant="middle" className={classes.spaceBottom} />
+                  )}
                   {positionName}
                 </Grid>
                 <Grid item xs={12}>

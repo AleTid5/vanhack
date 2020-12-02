@@ -1,4 +1,4 @@
-import { iJob } from "../interfaces";
+import {iJob} from "../interfaces";
 
 export default (jobs: iJob[]) => {
   jobs.sort((currentJob: iJob, nextJob: iJob) =>

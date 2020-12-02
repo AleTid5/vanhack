@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { Grid } from "@material-ui/core";
+import React, {ReactNode} from "react";
+import {Grid} from "@material-ui/core";
 
 interface Props {
   children: ReactNode;

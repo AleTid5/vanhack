@@ -1,11 +1,5 @@
-import React, {
-  createContext,
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  useState,
-} from "react";
-import { iJob } from "../interfaces";
+import React, {createContext, Dispatch, ReactNode, SetStateAction, useState,} from "react";
+import {iJob} from "../interfaces";
 
 interface iContext {
   jobs: iJob[];
