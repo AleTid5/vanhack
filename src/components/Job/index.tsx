@@ -1,11 +1,21 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import Job from "./Job";
-import {Avatar, Card, CardActionArea, CardContent, Chip, Divider, Grid, List, Typography,} from "@material-ui/core";
-import {FlagIcon} from "react-flag-kit";
+import {
+  Avatar,
+  Card,
+  CardActionArea,
+  CardContent,
+  Chip,
+  Divider,
+  Grid,
+  List,
+  Typography,
+} from "@material-ui/core";
+import { FlagIcon } from "react-flag-kit";
 import TimeAgo from "timeago-react";
 import styles from "./styles";
-import {iJob, iSkill} from "../../interfaces";
-import {ConfigurationContext} from "../../contexts/ConfigurationContext";
+import { iJob, iSkill } from "../../interfaces";
+import { ConfigurationContext } from "../../contexts/ConfigurationContext";
 
 interface Props extends iJob {
   showMainCountry: boolean;
@@ -44,7 +54,7 @@ export default ({
           <Chip
             label="New"
             className={classes.avatarPulse}
-            style={{ color: "#fff", backgroundColor: "#4caf50" }}
+            style={{ color: "#fff", backgroundColor: "#27b069" }}
             size="small"
           />
         </li>
